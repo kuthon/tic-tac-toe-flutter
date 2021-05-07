@@ -1,0 +1,12 @@
+{
+  "@@locale": "ru",
+  "tic_tac_toe": "Крестики-Нолики",
+  "your_turn": "Твой ход",
+  "opponents_turn": "Ход противника...",
+  "game_over": "Игра закончена!",
+  "for_two": "На двоих",
+  "by_size": "По размерам",
+  "without_borders": "Без границ",
+  "field_size": "Размер поля",
+  "size": "Size"
+}

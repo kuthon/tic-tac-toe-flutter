@@ -1,0 +1,12 @@
+{
+  "@@locale": "en",
+  "tic_tac_toe": "Tic-Tac-Toe",
+  "your_turn": "Your turn",
+  "opponents_turn": "Opponent's turn...",
+  "game_over": "Game Over!",
+  "for_two": "For two",
+  "by_size": "By size",
+  "without_borders": "Without borders",
+  "field_size": "Field Size",
+  "size": "Размер"
+}
