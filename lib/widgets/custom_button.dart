@@ -5,7 +5,7 @@ class CustomButton extends StatelessWidget {
   final String title;
   final Function onPressed;
 
-  CustomButton({@required this.title, @required this.onPressed});
+  CustomButton({required this.title, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

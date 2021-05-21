@@ -14,7 +14,7 @@ class Field extends StatefulWidget {
       {this.side = 4,
       this.vsBot = true,
       this.isInfinity = false,
-      this.winScore});
+      this.winScore = 4});
 
   @override
   _FieldState createState() => _FieldState(
@@ -25,14 +25,14 @@ class _FieldState extends State<Field> {
   final int winScore;
   final bool isInfinity;
   int side;
-  List _field;
-  String _title;
-  int _numberOfMoves;
+  List _field = [];
+  String _title = '';
+  int _numberOfMoves = 0;
   final bool vsBot;
-  bool _canDraw;
-  bool _firstMoveEnemy;
+  bool _canDraw = true;
+  bool _firstMoveEnemy = false;
 
-  _FieldState({this.side, this.vsBot, this.isInfinity, this.winScore});
+  _FieldState({required this.side, required this.vsBot, required this.isInfinity, required this.winScore});
 
   @override
   void initState() {
@@ -42,7 +42,8 @@ class _FieldState extends State<Field> {
 
   void reinitialization({bool firstMoveEnemy = false, String title = ''}) {
     setState(() {
-      if (isInfinity) side = 5;
+      if (isInfinity)
+        side = 5;
       _field = List.generate(side, (_) => List.filled(side, CageState.empty));
       _numberOfMoves = 0;
       _canDraw = true;
@@ -65,7 +66,7 @@ class _FieldState extends State<Field> {
       });
     }
 
-    bool _checkWin({int coordinateX, coordinateY}) {
+    bool _checkWin({required int coordinateX, required int coordinateY}) {
       bool checkLine(int x, int y, int dx, int dy) {
         int score = 1;
         bool search = true;
@@ -136,8 +137,7 @@ class _FieldState extends State<Field> {
                     ? S.of(context).your_turn
                     : S.of(context).opponents_turn);
           });
-        } else if (isInfinity && _numberOfMoves >= side * side ~/ 2) {
-          print(1);
+        } else if (isInfinity && _numberOfMoves >= side * side ~/ 2.2) {
           increaseSide();
         }
       }

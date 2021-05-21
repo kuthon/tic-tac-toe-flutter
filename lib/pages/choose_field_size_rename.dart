@@ -7,7 +7,7 @@ class ChooseFieldSizePage extends StatelessWidget {
 
   final bool vsBot;
 
-  ChooseFieldSizePage({@required this.vsBot});
+  ChooseFieldSizePage({required this.vsBot});
 
   @override
   Widget build(BuildContext context) {

@@ -8,10 +8,10 @@ class Cage extends StatelessWidget {
   final Function onPressed;
 
   Cage(
-      {@required this.cageState,
-        @required this.coordinateX,
-        @required this.coordinateY,
-        @required this.onPressed});
+      {required this.cageState,
+        required this.coordinateX,
+        required this.coordinateY,
+        required this.onPressed});
 
   _cageFilling(CageState cageState) {
     if (cageState == CageState.circle)
@@ -26,19 +26,21 @@ class Cage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: AspectRatio(
-        aspectRatio: 1,
-        child: Container(
-          width: double.infinity,
-          margin: const EdgeInsets.all(1),
-          color: Color.fromRGBO(255, 222, 198, 1),
-          child: GestureDetector(
-            behavior: HitTestBehavior.translucent,
-            onTap: () {
-              onPressed(coordinateY, coordinateX);
-            },
-            child: Container(child: _cageFilling(cageState), padding: const EdgeInsets.all(10),),
+          aspectRatio: 1,
+            child: Container(
+              margin: const EdgeInsets.all(1),
+              color: Color.fromRGBO(255, 222, 198, 1),
+              child: GestureDetector(
+                  behavior: HitTestBehavior.translucent,
+                  onTap: () {
+                    onPressed(coordinateY, coordinateX);
+                  },
+                child: Transform.scale(
+                  scale: 0.7,
+                  child: _cageFilling(cageState),
+                  ),
+              ),
           ),
-        ),
       ),
     );
   }

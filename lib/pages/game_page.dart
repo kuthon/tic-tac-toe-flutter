@@ -8,7 +8,7 @@ class GamePage extends StatelessWidget {
   final bool vsBot;
   final int winScore;
   final bool isInfinity;
-  GamePage({this.vsBot, this.side, this.isInfinity, this.winScore});
+  GamePage({required this.vsBot, required this.side, required this.isInfinity, required this.winScore});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class GamePage extends StatelessWidget {
               side: side,
               vsBot: vsBot,
               isInfinity: isInfinity,
-              winScore: winScore ?? side
+              winScore: winScore
             ),
           ],
         ),
