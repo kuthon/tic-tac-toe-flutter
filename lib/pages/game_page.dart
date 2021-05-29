@@ -45,7 +45,7 @@ class GamePage extends StatelessWidget {
               side: side,
               vsBot: vsBot,
               isInfinity: isInfinity,
-              winScore: winScore
+              winScore: winScore,
             ),
           ],
         ),

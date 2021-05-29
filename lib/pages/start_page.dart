@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:tic_tac_toe/generated/l10n.dart';
-import 'package:tic_tac_toe/pages/choose_field_size_rename.dart';
+import 'package:tic_tac_toe/pages/choose_field_size_page.dart';
 import 'package:tic_tac_toe/pages/game_page.dart';
 import 'package:tic_tac_toe/widgets/custom_button.dart';
 

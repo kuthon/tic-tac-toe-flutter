@@ -29,6 +29,7 @@ class CustomButton extends StatelessWidget {
         color: Theme.of(context).primaryColor,
       ),
       child: GestureDetector(
+        behavior: HitTestBehavior.translucent,
         onTapDown: (_) => onPressed(),
         child: Center(
           child: Container(
