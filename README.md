@@ -1,4 +1,4 @@
-Tic_tac_toe
+# Tic_tac_toe
 
 The application for playing tic-tac-toe. There is a game mode for two and against artificial intelligence. Field sizes: 3x3, 4x4, 5x5, 6x6, 7x7 and without borders.
 
